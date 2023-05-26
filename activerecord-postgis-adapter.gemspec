@@ -10,8 +10,8 @@ Gem::Specification.new do |spec|
 
   spec.version = ActiveRecord::ConnectionAdapters::PostGIS::VERSION
   spec.authors = ["Daniel Azuma", "Tee Parham"]
-  spec.email = ["dazuma@gmail.com", "parhameter@gmail.com", "kfdoggett@gmail.com"]
-  spec.homepage = "http://github.com/rgeo/activerecord-postgis-adapter"
+  spec.email = ["dazuma@gmail.com", "parhameter@gmail.com", "kfdoggett@gmail.com", "james@cipherstash.com"]
+  spec.homepage = "http://github.com/cipherstash/activerecord-postgis-adapter"
   spec.license = "BSD-3-Clause"
 
   spec.files = Dir["lib/**/*", "LICENSE.txt"]
@@ -20,6 +20,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = ">= 3.0.0"
 
   spec.add_dependency "activerecord", "~> 7.1.0"
+  spec.add_dependency 'activerecord-cipherstash-pg-adapter', "~> 0.7.10"
   spec.add_dependency "rgeo-activerecord", "~> 7.0.0"
 
   spec.add_development_dependency "rake", "~> 13.0"
