@@ -3,7 +3,7 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in activerecord-postgis-adapter.gemspec
 gemspec
 
-gem "cipherstash-pg", ">= 1.0.0.beta.9"
+gem "cipherstash-pg", ">= 1.0.0.beta.22"
 gem "byebug" if ENV["BYEBUG"]
 
 def activerecord_version
