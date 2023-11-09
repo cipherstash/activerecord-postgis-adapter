@@ -3,7 +3,7 @@
 module ActiveRecord  # :nodoc:
   module ConnectionAdapters  # :nodoc:
     module PostGIS  # :nodoc:
-      class TableDefinition < PostgreSQL::TableDefinition  # :nodoc:
+      class TableDefinition < CipherStashPG::TableDefinition  # :nodoc:
         include ColumnMethods
 
         # super: https://github.com/rails/rails/blob/master/activerecord/lib/active_record/connection_adapters/abstract/schema_definitions.rb
