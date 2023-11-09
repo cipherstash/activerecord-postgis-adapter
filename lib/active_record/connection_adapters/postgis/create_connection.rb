@@ -3,7 +3,7 @@
 if RUBY_ENGINE == "jruby"
   require "active_record/connection_adapters/jdbcpostgresql_adapter"
 else
-  require "pg"
+  require "cipherstash-pg"
 end
 
 module ActiveRecord  # :nodoc:
@@ -34,7 +34,7 @@ module ActiveRecord  # :nodoc:
         conn_params[:dbname] = conn_params.delete(:database) if conn_params[:database]
 
         # Forward only valid config params to PG.connect
-        valid_conn_param_keys = PG::Connection.conndefaults_hash.keys + [:requiressl]
+        valid_conn_param_keys = CipherStashPG::Connection.conndefaults_hash.keys + [:requiressl]
         conn_params.slice!(*valid_conn_param_keys)
 
         ConnectionAdapters::PostGISAdapter.new(

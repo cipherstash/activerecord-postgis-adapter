@@ -25,7 +25,7 @@ require "active_record/connection_adapters/postgis/create_connection"
 
 module ActiveRecord
   module ConnectionAdapters
-    class PostGISAdapter < PostgreSQLAdapter
+    class PostGISAdapter < CipherStashPGAdapter
       ADAPTER_NAME = 'PostGIS'
 
       SPATIAL_COLUMN_OPTIONS =

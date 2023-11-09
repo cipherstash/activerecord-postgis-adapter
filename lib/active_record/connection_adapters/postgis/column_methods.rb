@@ -47,6 +47,6 @@ module ActiveRecord
       end
     end
 
-    PostgreSQL::Table.include PostGIS::ColumnMethods
+    CipherStashPG::Table.include PostGIS::ColumnMethods
   end
 end

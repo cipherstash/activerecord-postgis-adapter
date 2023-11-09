@@ -11,7 +11,7 @@ module ActiveRecord
         rescue ArgumentError => e
           raise e unless current_adapter_name == :postgis
 
-          super(*args, adapter: :postgresql, **kwargs)
+          super(*args, adapter: :cipherstash_pg, **kwargs)
         end
       end
     end

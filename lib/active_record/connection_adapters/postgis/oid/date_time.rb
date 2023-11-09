@@ -13,7 +13,7 @@ module ActiveRecord
           end
         end
 
-        PostgreSQL::OID::DateTime.prepend(DateTime)
+        CipherStashPG::OID::DateTime.prepend(DateTime)
       end
     end
   end
