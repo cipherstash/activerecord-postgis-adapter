@@ -64,6 +64,11 @@ module ActiveRecord
         DEFAULT_SRID
       end
 
+      # scenic gem needs this method, but the CipherStash gem provides cipherstash_pg_version
+      def postgresql_version
+        cipherstash_pg_version
+      end
+
       class << self
         def initialize_type_map(map = type_map)
           %w[
